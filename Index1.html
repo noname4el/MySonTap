@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Расти своего сына 🌱</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;overflow-x:hidden}.screen{position:fixed;inset:0;display:none;flex-direction:column;overflow-y:auto}.screen.active{display:flex}#mainScreen{background:radial-gradient(ellipse at top,rgba(255,215,0,.08),transparent 60%),linear-gradient(135deg,#1a1a2e,#16213e 50%,#0f3460)}.bg-decor{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}.bg-decor span{position:absolute;font-size:40px;opacity:.08;animation:floatDecor 20s infinite linear}@keyframes floatDecor{100%{transform:translateY(-120vh) rotate(360deg)}}.header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;position:relative;z-index:10;flex-wrap:wrap;gap:10px}.logo{display:flex;align-items:center;gap:10px;cursor:pointer}.logo-icon{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#ffd700,#ff8c00);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(255,215,0,.35);flex-shrink:0;overflow:hidden;position:relative}.logo-icon svg{width:100%;height:100%;display:block}.logo-text{display:flex;flex-direction:column;line-height:1.1}.logo-text .line1{font-size:15px;font-weight:800;background:linear-gradient(90deg,#ffd700,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.logo-text .line2{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45)}.auth-buttons{display:flex;gap:8px;align-items:center}.auth-btn{padding:10px 18px;font-size:13px;font-weight:800;border-radius:12px;cursor:pointer;border:none;transition:transform .15s;white-space:nowrap}.auth-btn:active{transform:scale(.95)}.auth-btn.login{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);color:#fff}.auth-btn.register{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#1a1a2e;box-shadow:0 4px 14px rgba(255,215,0,.35)}.user-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(0,0,0,.4);border:1.5px solid rgba(255,215,0,.35);border-radius:30px;font-size:13px;font-weight:700;cursor:pointer}.user-avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#ffd700,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1a2e;font-weight:900;flex-shrink:0}.main-content{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;position:relative;z-index:5;text-align:center;min-height:60vh}.hero-title{font-size:clamp(32px,8vw,54px);font-weight:900;line-height:1.05;margin-bottom:8px;background:linear-gradient(90deg,#fff,#ffd700 50%,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 4px 20px rgba(255,215,0,.3))}.hero-subtitle{font-size:clamp(14px,3.5vw,18px);color:rgba(255,255,255,.6);margin-bottom:30px;max-width:400px;line-height:1.5}.hero-kid-block{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:20px}.hero-kid-title{font-size:14px;font-weight:800;color:#a8e6a1;text-transform:uppercase;letter-spacing:1.5px;display:flex;align-items:center;gap:6px}.hero-kid-title .badge{font-size:10px;padding:2px 8px;background:rgba(120,220,150,.2);border:1px solid rgba(120,220,150,.5);border-radius:8px;color:#a8e6a1;letter-spacing:.5px;text-transform:none}.hero-kid-wrap{animation:heroKidBounce 2.5s infinite ease-in-out;filter:drop-shadow(0 15px 30px rgba(120,220,150,.35));transform-origin:bottom center;display:flex;justify-content:center}@keyframes heroKidBounce{50%{transform:translateY(-12px)}}.hero-kid-info{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:240px;max-width:300px}.hero-kid-stats{display:flex;gap:16px;font-size:12px;color:rgba(255,255,255,.7);font-weight:700}.hero-kid-stats b{color:#a8e6a1}.hero-xp-bar{width:100%;height:10px;background:rgba(0,0,0,.4);border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}.hero-xp-fill{height:100%;background:linear-gradient(90deg,#4caf50,#a8e6a1,#ffd700);border-radius:6px;transition:width .4s}.hero-kid-hint{font-size:10px;color:rgba(255,255,255,.4);text-align:center}.play-btn{padding:24px 80px;font-size:26px;font-weight:900;letter-spacing:3px;border:none;border-radius:24px;background:linear-gradient(135deg,#ffd700,#ff8c00);color:#1a1a2e;cursor:pointer;transition:transform .15s;box-shadow:0 10px 0 #b8860b,0 20px 40px rgba(255,140,0,.4);text-transform:uppercase}.play-btn:active{transform:translateY(6px);box-shadow:0 4px 0 #b8860b}.play-hint{margin-top:18px;font-size:13px;color:rgba(255,255,255,.4)}.footer{padding:14px 20px;text-align:center;font-size:11px;color:rgba(255,255,255,.3)}#selectScreen{background:radial-gradient(ellipse at top,rgba(255,215,0,.08),transparent 60%),linear-gradient(135deg,#1a1a2e,#16213e 50%,#0f3460)}.select-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;gap:10px;flex-wrap:wrap;position:sticky;top:0;z-index:20;background:rgba(26,26,46,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,215,0,.15)}.select-title-wrap{display:flex;flex-direction:column;gap:2px;flex:1;min-width:140px}.select-title{font-size:clamp(16px,4.5vw,22px);font-weight:900;background:linear-gradient(90deg,#ffd700,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.select-subtitle{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:1px;text-transform:uppercase}.back-btn{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);color:#fff;padding:10px 16px;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;transition:transform .15s;flex-shrink:0}.back-btn:active{transform:scale(.96)}.select-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;padding:18px;width:100%;max-width:900px;margin:0 auto;flex:1;align-content:start}.select-card{background:rgba(0,0,0,.45);border:2px solid rgba(255,255,255,.12);border-radius:20px;padding:18px 12px 16px;text-align:center;cursor:pointer;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:8px;transition:transform .15s}.select-card:active{transform:scale(.96)}.select-card.active{border-color:#ffd700;box-shadow:0 0 25px rgba(255,215,0,.45);background:rgba(255,215,0,.08)}.select-card .avatar{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:46px;border:3px solid rgba(255,255,255,.2);flex-shrink:0}.select-card.active .avatar{border-color:#ffd700;box-shadow:0 0 20px rgba(255,215,0,.6)}.select-card .name{font-size:15px;font-weight:800;color:#fff}.select-card .money{font-size:14px;font-weight:900;color:#ffd700}.select-card .per-tap{font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px}.select-card .child-mini{font-size:11px;color:rgba(255,255,255,.65)}.select-card .active-badge{position:absolute;top:10px;right:10px;background:#ffd700;color:#1a1a2e;font-size:9px;font-weight:900;padding:3px 9px;border-radius:10px;z-index:2}.select-card .card-buttons{display:flex;gap:6px;width:100%;margin-top:6px}.select-card .play-mini,.select-card .child-mini-btn{flex:1;padding:9px 4px;font-size:11px;font-weight:900;letter-spacing:.3px;border:none;border-radius:10px;cursor:pointer;text-transform:uppercase;transition:transform .15s;display:flex;align-items:center;justify-content:center;gap:2px;white-space:nowrap;min-width:0;overflow:hidden}.select-card .play-mini{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#1a1a2e;box-shadow:0 3px 0 #b8860b}.select-card .play-mini:active{transform:translateY(2px);box-shadow:0 1px 0 #b8860b}.select-card .child-mini-btn{background:linear-gradient(135deg,#4caf50,#a8e6a1);color:#0a2e12;box-shadow:0 3px 0 #2e7d32}.select-card .child-mini-btn:active{transform:translateY(2px);box-shadow:0 1px 0 #2e7d32}#gameScreen{align-items:center;justify-content:flex-start}.game-topbar{width:100%;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:8px;flex-wrap:wrap}.game-container{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;max-width:560px;padding:10px 20px 30px}.mini-menu-row{display:flex;gap:8px;width:100%}.mini-btn{flex:1;padding:12px 8px;font-size:13px;font-weight:800;border:2px solid rgba(255,215,0,.4);border-radius:14px;background:rgba(0,0,0,.4);color:#ffd700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:transform .15s}.mini-btn:active{transform:scale(.96)}.money-display{background:rgba(0,0,0,.4);border:2px solid rgba(255,215,0,.4);border-radius:20px;padding:12px 35px;display:flex;align-items:center;gap:10px}.money-icon{font-size:28px;animation:pulse 2s infinite}@keyframes pulse{50%{transform:scale(1.15)}}.money-value{font-size:32px;font-weight:900;color:#ffd700;transition:transform .1s}.money-value.bump{transform:scale(1.2)}.scene{position:relative;width:100%;height:300px;display:flex;align-items:flex-end;justify-content:center;padding:0 10px 20px}.scene::after{content:'';position:absolute;bottom:0;left:-10%;right:-10%;height:4px;background:linear-gradient(90deg,transparent,rgba(120,220,150,.5),transparent);border-radius:6px}.character-wrapper{position:relative;cursor:pointer;transition:transform .08s;flex-shrink:0;align-self:flex-end}.character-wrapper:active{transform:scale(.92)}.character{width:160px;height:160px;border-radius:50%;border:5px solid #ffd700;display:flex;align-items:center;justify-content:center;font-size:84px;position:relative;overflow:hidden}.tap-hint{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:#ffd700;color:#1a1a2e;font-weight:800;padding:6px 16px;border-radius:20px;font-size:14px;white-space:nowrap;z-index:10}.stats{display:flex;gap:10px;width:100%;justify-content:center}.stat-box{background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.15);border-radius:15px;padding:10px 16px;text-align:center;flex:1;max-width:150px}.stat-label{font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:1px}.stat-value{font-size:18px;font-weight:800;margin-top:4px}.stat-value.bonus{color:#a8e6a1}.grow-progress{width:100%;display:flex;flex-direction:column;gap:6px}.grow-progress-header{display:flex;justify-content:space-between;font-size:12px;font-weight:700}.grow-progress-title b{color:#a8e6a1}.grow-progress-value{color:#ffd700;font-size:11px}.xp-bar{width:100%;height:14px;background:rgba(0,0,0,.4);border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}.xp-fill{height:100%;background:linear-gradient(90deg,#4caf50,#a8e6a1,#ffd700);border-radius:8px;transition:width .4s}.upgrade-btn{width:100%;padding:16px;font-size:15px;font-weight:800;border:none;border-radius:18px;background:linear-gradient(135deg,#ffd700,#ff8c00);color:#1a1a2e;cursor:pointer;transition:transform .15s;box-shadow:0 6px 0 #b8860b;text-transform:uppercase;letter-spacing:1px}.upgrade-btn:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px 0 #b8860b}.upgrade-btn:disabled{background:linear-gradient(135deg,#555,#333);color:#888;box-shadow:0 6px 0 #222;cursor:not-allowed}.float-text{position:absolute;font-size:26px;font-weight:900;color:#ffd700;pointer-events:none;animation:floatUp 1s ease-out forwards;z-index:100}@keyframes floatUp{0%{opacity:1;transform:translate(-50%,0) scale(.5)}100%{opacity:0;transform:translate(-50%,-120px) scale(1)}}.overlay{position:fixed;inset:0;background:rgba(10,10,25,.92);backdrop-filter:blur(8px);z-index:500;display:none;flex-direction:column;align-items:center;justify-content:center;padding:20px;overflow-y:auto}.overlay.open{display:flex}.menu-panel{width:100%;max-width:480px;background:linear-gradient(160deg,#1f1f3a,#16213e);border:2px solid rgba(255,215,0,.3);border-radius:24px;padding:22px 18px;max-height:90vh;overflow-y:auto}.menu-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.menu-title{font-size:19px;font-weight:800;color:#ffd700}.close-btn{background:rgba(255,255,255,.1);border:none;color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}#childMenu .menu-panel{max-width:520px;border-color:rgba(120,220,150,.4)}#childMenu .menu-title{color:#a8e6a1}.child-name-display{text-align:center;font-size:17px;font-weight:900;color:#a8e6a1;margin-bottom:4px}.child-stage-sub{text-align:center;font-size:12px;color:rgba(255,255,255,.55);margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}.child-preview-wrap{display:flex;justify-content:center;align-items:flex-end;height:260px;padding:10px 0 20px;margin-bottom:10px;background:radial-gradient(ellipse at center bottom,rgba(120,220,150,.12),transparent 70%);border-radius:16px}.kid-wrap{position:relative;display:flex;align-items:flex-end;justify-content:center}.kid{position:relative;width:110px;height:260px;--skin:#f5c99b;--skin-shadow:#d9a066;--hair:#6b4423;--shirt:#4caf50;--shirt-shadow:#2e7d32;--pants:#2b5fa8;--pants-shadow:#1a3d70}.kid-head{position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:70px;border-radius:46% 46% 44% 44% / 50% 50% 50% 50%;background:radial-gradient(circle at 35% 32%,var(--skin),var(--skin-shadow) 85%);z-index:10}.kid-hair{position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:66px;height:40px;border-radius:54% 54% 42% 42% / 72% 72% 30% 30%;background:var(--hair);z-index:11}.kid-ear{position:absolute;top:28px;width:12px;height:20px;border-radius:50%;background:var(--skin-shadow);z-index:9}.kid-ear.left{left:-6px}.kid-ear.right{right:-6px}.kid-eyes{position:absolute;top:28px;left:50%;transform:translateX(-50%);display:flex;gap:14px;z-index:12}.kid-eye{width:8px;height:10px;background:#1a1a2e;border-radius:50%;position:relative}.kid-eye::after{content:'';position:absolute;top:1px;left:1px;width:3px;height:3px;background:#fff;border-radius:50%}.kid-brow{position:absolute;top:20px;width:12px;height:3px;border-radius:3px;background:var(--hair);z-index:11}.kid-brow.left{left:14px}.kid-brow.right{right:14px}.kid-nose{position:absolute;top:40px;left:50%;transform:translateX(-50%);width:5px;height:7px;border-radius:50%;background:var(--skin-shadow);z-index:11;opacity:.6}.kid-mouth{position:absolute;top:52px;left:50%;transform:translateX(-50%);width:17px;height:9px;background:#8b2e2e;border-radius:0 0 14px 14px;z-index:11}.kid-cheek{position:absolute;top:44px;width:10px;height:6px;background:rgba(255,120,120,.45);border-radius:50%;z-index:10}.kid-cheek.left{left:6px}.kid-cheek.right{right:6px}.kid-neck{position:absolute;top:66px;left:50%;transform:translateX(-50%);width:22px;height:14px;background:var(--skin-shadow);z-index:5}.kid-torso{position:absolute;top:78px;left:50%;transform:translateX(-50%);width:60px;height:76px;background:linear-gradient(160deg,var(--shirt),var(--shirt-shadow));border-radius:14px 14px 8px 8px;z-index:6}.kid-arm{position:absolute;top:84px;width:14px;height:72px;background:linear-gradient(180deg,var(--shirt) 0%,var(--shirt) 35%,var(--skin) 35%,var(--skin) 100%);border-radius:7px;z-index:3}.kid-arm.left{left:7px}.kid-arm.right{right:7px}.kid-arm::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:16px;height:18px;border-radius:50%;background:var(--skin)}.kid-pants{position:absolute;top:152px;left:50%;transform:translateX(-50%);width:58px;height:38px;background:linear-gradient(180deg,var(--pants),var(--pants-shadow));border-radius:4px 4px 10px 10px;z-index:5}.kid-leg{position:absolute;top:185px;width:18px;height:68px;background:linear-gradient(180deg,var(--pants) 0%,var(--pants) 22%,var(--skin) 22%,var(--skin) 100%);border-radius:8px 8px 6px 6px;z-index:4}.kid-leg.left{left:26px}.kid-leg.right{right:26px}.kid-leg::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:24px;height:14px;border-radius:6px 6px 8px 8px;background:linear-gradient(180deg,#2c2c3e,#1a1a2e)}.kid-shadow{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:110px;height:16px;background:radial-gradient(ellipse,rgba(0,0,0,.55),transparent 70%);border-radius:50%;z-index:0}.custom-section{margin-bottom:16px}.custom-label{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.6);margin-bottom:8px;font-weight:700}.color-row{display:flex;flex-wrap:wrap;gap:8px}.color-swatch{width:40px;height:40px;border-radius:12px;border:2px solid rgba(255,255,255,.15);cursor:pointer;position:relative;flex-shrink:0}.color-swatch.selected{border-color:#ffd700;box-shadow:0 0 15px rgba(255,215,0,.5);transform:scale(1.08)}.color-swatch.selected::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.9)}.name-input{width:100%;padding:12px 16px;font-size:16px;border:2px solid rgba(120,220,150,.35);border-radius:12px;background:rgba(0,0,0,.4);color:#fff;outline:none;font-weight:700}.save-child-btn{width:100%;padding:14px;font-size:14px;font-weight:800;border:none;border-radius:14px;background:linear-gradient(135deg,#4caf50,#a8e6a1);color:#0a2e12;cursor:pointer;box-shadow:0 5px 0 #2e7d32;text-transform:uppercase;letter-spacing:1px;margin-top:8px}.save-child-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #2e7d32}.auth-tabs{display:flex;gap:8px;margin-bottom:16px;background:rgba(0,0,0,.3);padding:5px;border-radius:14px}.auth-tab{flex:1;padding:10px;font-size:14px;font-weight:800;border:none;border-radius:10px;background:transparent;color:rgba(255,255,255,.6);cursor:pointer}.auth-tab.active{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#1a1a2e}.auth-form{display:flex;flex-direction:column;gap:12px}.input-group label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:6px}.input-group input{width:100%;padding:14px 16px;font-size:16px;border:2px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(0,0,0,.4);color:#fff;outline:none}.primary-btn{width:100%;padding:15px;font-size:15px;font-weight:800;border:none;border-radius:14px;background:linear-gradient(135deg,#ffd700,#ff8c00);color:#1a1a2e;cursor:pointer;box-shadow:0 5px 0 #b8860b;text-transform:uppercase;letter-spacing:1px}.primary-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #b8860b}.danger-btn{width:100%;padding:12px;font-size:13px;font-weight:700;border:2px solid rgba(255,80,80,.5);border-radius:12px;background:rgba(255,80,80,.1);color:#ff6b6b;cursor:pointer;text-transform:uppercase;letter-spacing:1px;margin-top:16px}.rating-list{display:flex;flex-direction:column;gap:8px}.rating-row{display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.1);border-radius:14px}.rating-row.me{border-color:#ffd700;background:rgba(255,215,0,.1)}.rating-rank{font-size:16px;font-weight:900;width:34px;text-align:center;flex-shrink:0}.rating-info{flex:1;min-width:0}.rating-name{font-size:14px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rating-char{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}.rating-money{font-size:15px;font-weight:900;color:#ffd700;flex-shrink:0}.rating-empty{text-align:center;padding:30px 10px;color:rgba(255,255,255,.5);font-size:14px}.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-100px);background:rgba(255,215,0,.95);color:#1a1a2e;padding:12px 24px;border-radius:12px;font-weight:800;font-size:15px;transition:transform .3s;z-index:2000;max-width:90vw;text-align:center;pointer-events:none}.toast.show{transform:translateX(-50%) translateY(0)}.toast.error{background:rgba(255,80,80,.95);color:#fff}.toast.success{background:rgba(120,220,150,.95);color:#0a2e12}.char-bg-1{background:radial-gradient(circle at 30% 30%,#8B5A2B,#4a2c0f)}.char-bg-2{background:radial-gradient(circle at 30% 30%,#f5c99b,#c98a5a)}.char-bg-3{background:radial-gradient(circle at 30% 30%,#ffd94a,#b8860b)}.char-bg-4{background:radial-gradient(circle at 30% 30%,#7eb8ff,#2b5fa8)}.char-bg-5{background:radial-gradient(circle at 30% 30%,#a8e6a1,#2f7a3a)}.char-bg-6{background:radial-gradient(circle at 30% 30%,#ff9ac9,#a8286f)}.char-avatar-1{background:radial-gradient(circle,#6b4423,#3a2208)}.char-avatar-2{background:radial-gradient(circle,#ffe0c2,#d9a066)}.char-avatar-3{background:radial-gradient(circle,#fff0a0,#d4a017)}.char-avatar-4{background:radial-gradient(circle,#b8dcff,#3a7bd5)}.char-avatar-5{background:radial-gradient(circle,#c9f5c2,#3aa04a)}.char-avatar-6{background:radial-gradient(circle,#ffd0e6,#d4387f)}
+</style>
+</head>
+<body>
+
+<!-- ГЛАВНОЕ МЕНЮ -->
+<div class="screen active" id="mainScreen">
+  <div class="bg-decor" id="bgDecor"></div>
+  <header class="header">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fff8d6" />
+              <stop offset="50%" stop-color="#ffd700" />
+              <stop offset="100%" stop-color="#ff8c00" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="50" fill="url(#goldGrad)" />
+          <!-- Голова ребенка -->
+          <circle cx="50" cy="42" r="18" fill="#f5c99b" />
+          <!-- Глаза -->
+          <circle cx="43" cy="40" r="2.5" fill="#1a1a2e" />
+          <circle cx="57" cy="40" r="2.5" fill="#1a1a2e" />
+          <!-- Улыбка -->
+          <path d="M 44 48 Q 50 54 56 48" stroke="#8b2e2e" stroke-width="2" fill="none" stroke-linecap="round" />
+          <!-- Тело (футболка) -->
+          <path d="M 30 85 Q 30 65 50 65 Q 70 65 70 85 Z" fill="#4caf50" />
+          <!-- Листик на голове -->
+          <path d="M 50 24 Q 55 15 65 18 Q 60 28 50 24 Z" fill="#2e7d32" />
+          <path d="M 50 24 Q 45 15 35 18 Q 40 28 50 24 Z" fill="#4caf50" />
+          <!-- Стебель -->
+          <path d="M 50 24 L 50 15" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="logo-text"><span class="line1">Расти своего сына</span><span class="line2">tap game</span></div>
+    </div>
+    <div class="auth-buttons" id="authButtons">
+      <button class="auth-btn login" id="headerLoginBtn">Войти</button>
+      <button class="auth-btn register" id="headerRegisterBtn">Регистрация</button>
+    </div>
+    <div class="user-chip" id="headerUserChip" style="display:none;">
+      <div class="user-avatar" id="headerUserAvatar">?</div>
+      <span id="headerUserName">user</span>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div class="hero-kid-block">
+      <div class="hero-kid-title">👶 Общий сын <span class="badge" id="heroKidBadge">0 / 6</span></div>
+      <div class="hero-kid-wrap">
+        <div class="kid-wrap" style="transform: scale(0.85);">
+          <div class="kid" id="heroKid">
+            <div class="kid-shadow"></div><div class="kid-leg left"></div><div class="kid-leg right"></div><div class="kid-pants"></div><div class="kid-torso"></div><div class="kid-arm left"></div><div class="kid-arm right"></div><div class="kid-neck"></div><div class="kid-ear left"></div><div class="kid-ear right"></div><div class="kid-head"><div class="kid-hair"></div><div class="kid-brow left"></div><div class="kid-brow right"></div><div class="kid-cheek left"></div><div class="kid-cheek right"></div><div class="kid-eyes"><div class="kid-eye"></div><div class="kid-eye"></div></div><div class="kid-nose"></div><div class="kid-mouth"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-kid-info">
+        <div class="hero-kid-stats"><span>🌱 <b id="heroKidStage">Младенец</b></span><span>⭐ <b id="heroKidXp">0</b> XP</span></div>
+        <div class="hero-xp-bar"><div class="hero-xp-fill" id="heroXpFill" style="width:0%"></div></div>
+        <div class="hero-kid-hint" id="heroKidHint">Суммарный прогресс всех детей</div>
+      </div>
+    </div>
+    <h1 class="hero-title">Расти своего сына</h1>
+    <p class="hero-subtitle">Тапай, качайся и кастомизируй малышей. Общий сын растёт от прогресса всех!</p>
+    <button class="play-btn" id="playBtn">▶ Играть</button>
+    <div class="play-hint">Выбери тапалку и начинай растить 🌱</div>
+  </div>
+  <footer class="footer">© 2026 Расти своего сына · v18</footer>
+</div>
+
+<!-- ВЫБОР -->
+<div class="screen" id="selectScreen">
+  <div class="select-header">
+    <button class="back-btn" id="selectBackBtn">← Назад</button>
+    <div class="select-title-wrap"><div class="select-title">🎯 Выбери тапалку</div><div class="select-subtitle">у каждого свой малыш</div></div>
+  </div>
+  <div class="select-grid" id="selectGrid"></div>
+</div>
+
+<!-- ИГРА -->
+<div class="screen" id="gameScreen">
+  <div class="game-topbar">
+    <button class="back-btn" id="backBtn">← Тапалки</button>
+    <div class="logo" style="gap:6px;">
+      <div class="logo-icon" style="width:32px;height:32px;">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="50" fill="url(#goldGrad)" />
+          <circle cx="50" cy="42" r="18" fill="#f5c99b" />
+          <circle cx="43" cy="40" r="2.5" fill="#1a1a2e" />
+          <circle cx="57" cy="40" r="2.5" fill="#1a1a2e" />
+          <path d="M 44 48 Q 50 54 56 48" stroke="#8b2e2e" stroke-width="2" fill="none" stroke-linecap="round" />
+          <path d="M 30 85 Q 30 65 50 65 Q 70 65 70 85 Z" fill="#4caf50" />
+          <path d="M 50 24 Q 55 15 65 18 Q 60 28 50 24 Z" fill="#2e7d32" />
+          <path d="M 50 24 Q 45 15 35 18 Q 40 28 50 24 Z" fill="#4caf50" />
+          <path d="M 50 24 L 50 15" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </div>
+      <span class="logo-text" style="font-size:13px;font-weight:800;color:#ffd700;">Расти сына</span>
+    </div>
+    <div class="user-chip" id="gameUserChip"><div class="user-avatar" id="gameUserAvatar">?</div><span id="gameUserName">Гость</span></div>
+  </div>
+  <div class="game-container">
+    <div class="mini-menu-row">
+      <button class="mini-btn" id="openTapsBtn">🎯 Сменить</button>
+      <button class="mini-btn" id="openRatingBtn">🏆 Рейтинг</button>
+    </div>
+    <div class="money-display"><span class="money-icon">💰</span><span class="money-value" id="money">0</span></div>
+    <div class="scene">
+      <div class="character-wrapper" id="character-wrapper"><div class="tap-hint" id="tapHint">ТАПАЙ!</div><div class="character" id="character">🧑🏿</div></div>
+    </div>
+    <div class="grow-progress">
+      <div class="grow-progress-header"><div class="grow-progress-title">🌱 Рост: <b id="childStageName">Младенец</b></div><div class="grow-progress-value" id="childXpValue">0 / 50</div></div>
+      <div class="xp-bar"><div class="xp-fill" id="xpFill" style="width:0%"></div></div>
+    </div>
+    <div class="stats">
+      <div class="stat-box"><div class="stat-label">За тап</div><div class="stat-value" id="perTap">1</div></div>
+      <div class="stat-box"><div class="stat-label">Бонус сына</div><div class="stat-value bonus" id="childBonus">+0%</div></div>
+      <div class="stat-box"><div class="stat-label">Тапов</div><div class="stat-value" id="totalTaps">0</div></div>
+    </div>
+    <button class="upgrade-btn" id="upgradeBtn">Улучшить (+1 за тап) — <span id="upgradeCost">50</span> 💰</button>
+  </div>
+</div>
+
+<!-- МЕНЮ РЕБЁНКА -->
+<div class="overlay" id="childMenu">
+  <div class="menu-panel">
+    <div class="menu-header"><div class="menu-title">👶 Твой ребёнок</div><button class="close-btn" data-close="childMenu">✕</button></div>
+    <div class="child-name-display" id="childPreviewName">Даррен</div>
+    <div class="child-stage-sub" id="childPreviewStage">Младенец · 0 XP</div>
+    <div class="child-preview-wrap">
+      <div class="kid-wrap">
+        <div class="kid" id="childMenuKid">
+          <div class="kid-shadow"></div><div class="kid-leg left"></div><div class="kid-leg right"></div><div class="kid-pants"></div><div class="kid-torso"></div><div class="kid-arm left"></div><div class="kid-arm right"></div><div class="kid-neck"></div><div class="kid-ear left"></div><div class="kid-ear right"></div><div class="kid-head"><div class="kid-hair"></div><div class="kid-brow left"></div><div class="kid-brow right"></div><div class="kid-cheek left"></div><div class="kid-cheek right"></div><div class="kid-eyes"><div class="kid-eye"></div><div class="kid-eye"></div></div><div class="kid-nose"></div><div class="kid-mouth"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-section"><div class="custom-label">📝 Имя ребёнка</div><input type="text" class="name-input" id="childNameInput" maxlength="14" placeholder="Введи имя..."></div>
+    <div class="custom-section"><div class="custom-label">🎨 Цвет кожи</div><div class="color-row" id="skinRow"></div></div>
+    <div class="custom-section"><div class="custom-label">💇 Цвет волос</div><div class="color-row" id="hairRow"></div></div>
+    <div class="custom-section"><div class="custom-label">👕 Цвет футболки</div><div class="color-row" id="shirtRow"></div></div>
+    <div class="custom-section"><div class="custom-label">👖 Цвет штанов</div><div class="color-row" id="pantsRow"></div></div>
+    <button class="save-child-btn" id="saveChildBtn">💾 Сохранить</button>
+  </div>
+</div>
+
+<!-- РЕЙТИНГ -->
+<div class="overlay" id="ratingMenu">
+  <div class="menu-panel">
+    <div class="menu-header"><div class="menu-title">🏆 Рейтинг игроков</div><button class="close-btn" data-close="ratingMenu">✕</button></div>
+    <div class="rating-list" id="ratingList"></div>
+  </div>
+</div>
+
+<!-- АВТОРИЗАЦИЯ -->
+<div class="overlay" id="authMenu">
+  <div class="menu-panel">
+    <div class="menu-header"><div class="menu-title" id="authTitle">👤 Вход</div><button class="close-btn" data-close="authMenu">✕</button></div>
+    <div class="auth-tabs" id="authTabs"><button class="auth-tab active" data-tab="login">Вход</button><button class="auth-tab" data-tab="register">Регистрация</button></div>
+    <form class="auth-form" id="loginForm">
+      <div class="input-group"><label>Логин</label><input type="text" id="loginName" placeholder="Введи логин" maxlength="20"></div>
+      <div class="input-group"><label>Пароль</label><input type="password" id="loginPass" placeholder="Введи пароль" maxlength="40"></div>
+      <button type="submit" class="primary-btn">Войти</button>
+    </form>
+    <form class="auth-form" id="registerForm" style="display:none;">
+      <div class="input-group"><label>Логин</label><input type="text" id="regName" placeholder="Логин 3-20 символов" maxlength="20"></div>
+      <div class="input-group"><label>Пароль</label><input type="password" id="regPass" placeholder="Минимум 4 символа" maxlength="40"></div>
+      <div class="input-group"><label>Повтори пароль</label><input type="password" id="regPass2" placeholder="Повтори пароль" maxlength="40"></div>
+      <button type="submit" class="primary-btn">Создать</button>
+    </form>
+    <button class="danger-btn" id="logoutBtn" style="display:none;">Выйти</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+  'use strict';
+  var CHARACTERS = [
+    { id: 'black', emoji: '🧑🏿', name: 'Тёмный', bgClass: 'char-bg-1', avatarClass: 'char-avatar-1', childName: 'Даррен', skin: '#8B5A2B', hair: '#1a1a1a', shirt: '#e74c3c', pants: '#2c3e50' },
+    { id: 'white', emoji: '🧑🏻', name: 'Светлый', bgClass: 'char-bg-2', avatarClass: 'char-avatar-2', childName: 'Томми', skin: '#f5c99b', hair: '#c98a3a', shirt: '#3498db', pants: '#34495e' },
+    { id: 'blonde', emoji: '👱🏼', name: 'Блондин', bgClass: 'char-bg-3', avatarClass: 'char-avatar-3', childName: 'Джонни', skin: '#ffe0c2', hair: '#f1c40f', shirt: '#9b59b6', pants: '#2c3e50' },
+    { id: 'ninja', emoji: '🥷', name: 'Ниндзя', bgClass: 'char-bg-4', avatarClass: 'char-avatar-4', childName: 'Кенджи', skin: '#e0b08a', hair: '#2c3e50', shirt: '#1a1a1a', pants: '#1a1a1a' },
+    { id: 'alien', emoji: '👽', name: 'Пришелец', bgClass: 'char-bg-5', avatarClass: 'char-avatar-5', childName: 'Зорг', skin: '#a8e6a1', hair: '#2e7d32', shirt: '#00bcd4', pants: '#006064' },
+    { id: 'demon', emoji: '😈', name: 'Демон', bgClass: 'char-bg-6', avatarClass: 'char-avatar-6', childName: 'Люцик', skin: '#e74c3c', hair: '#1a1a1a', shirt: '#8e44ad', pants: '#1a1a1a' }
+  ];
+  var SKIN_COLORS = ['#ffe0c2','#f5c99b','#e0b08a','#c98a5a','#a87244','#8B5A2B','#5a3719','#3a2208','#a8e6a1','#7eb8ff','#ff9ac9','#e74c3c'];
+  var HAIR_COLORS = ['#1a1a1a','#3a2208','#6b4423','#c98a3a','#f1c40f','#e74c3c','#8e44ad','#2b5fa8','#2e7d32','#ff8c00','#c0c0c0','#ff69b4'];
+  var SHIRT_COLORS = ['#4caf50','#3498db','#e74c3c','#9b59b6','#f1c40f','#ff8c00','#00bcd4','#1a1a1a','#ffffff','#ff69b4','#2e7d32','#8e44ad'];
+  var PANTS_COLORS = ['#2b5fa8','#2c3e50','#1a1a1a','#34495e','#1a3d70','#5a3719','#3a2208','#00bcd4','#4caf50','#8e44ad','#c0c0c0','#ff8c00'];
+  var CHILD_STAGES = [
+    { minXp: 0, name: 'Младенец', scale: 0.65, bonus: 0 }, { minXp: 50, name: 'Малыш', scale: 0.75, bonus: 5 },
+    { minXp: 150, name: 'Мальчик', scale: 0.88, bonus: 15 }, { minXp: 350, name: 'Подросток', scale: 1.00, bonus: 30 },
+    { minXp: 700, name: 'Взрослый', scale: 1.10, bonus: 50 }, { minXp: 1500, name: 'Отец', scale: 1.18, bonus: 80 },
+    { minXp: 3000, name: 'Мудрец', scale: 1.25, bonus: 150 }
+  ];
+  var USERS_KEY = 'tapUsers_v18', SESSION_KEY = 'tapSession_v18', SAVES_KEY = 'tapSaves_v18';
+  var users = {}, saves = {}, currentLogin = null, currentId = CHARACTERS[0].id, customDraft = null;
+  function $(id) { return document.getElementById(id); }
+  function stageByXp(xp) { var s = CHILD_STAGES[0]; for (var i=0;i<CHILD_STAGES.length;i++) if (xp >= CHILD_STAGES[i].minXp) s = CHILD_STAGES[i]; return s; }
+  function stageIdx(xp) { var i = 0; CHILD_STAGES.forEach(function(s,k){ if (xp >= s.minXp) i = k; }); return i; }
+  function progressToNext(xp) { var i = stageIdx(xp); if (i >= CHILD_STAGES.length - 1) return 1; var c = CHILD_STAGES[i], n = CHILD_STAGES[i+1]; return Math.min(1, (xp - c.minXp) / (n.minXp - c.minXp)); }
+  function defaultChild() { return { xp: 0, name: '', skin: '', hair: '', shirt: '', pants: '' }; }
+  function defaultSave() { return { money: 0, perTap: 1, upgradeCost: 50, totalTaps: 0, upgradeLevel: 1, child: defaultChild() }; }
+  function fmt(n) { if (n >= 1e9) return (n/1e9).toFixed(2)+'B'; if (n >= 1e6) return (n/1e6).toFixed(2)+'M'; if (n >= 1e3) return (n/1e3).toFixed(1)+'K'; return Math.floor(n).toString(); }
+  var toastTimer;
+  function toast(msg, type) { var el = $('toast'); el.textContent = msg; el.className = 'toast'; if (type === 'error') el.classList.add('error'); if (type === 'success') el.classList.add('success'); el.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(function(){ el.classList.remove('show'); }, 2200); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function shade(hex, pct) { if (!hex) return '#000'; var num = parseInt(hex.replace('#',''), 16); var amt = Math.round(2.55 * pct); var R = Math.max(0, Math.min(255, (num >> 16) + amt)); var G = Math.max(0, Math.min(255, ((num >> 8) & 0xFF) + amt)); var B = Math.max(0, Math.min(255, (num & 0xFF) + amt)); return '#' + (0x1000000 + R*0x10000 + G*0x100 + B).toString(16).slice(1); }
+  function load() { try { users = JSON.parse(localStorage.getItem(USERS_KEY)) || {}; } catch(e) { users = {}; } try { saves = JSON.parse(localStorage.getItem(SAVES_KEY)) || {}; } catch(e) { saves = {}; } try { var s = JSON.parse(localStorage.getItem(SESSION_KEY)); if (s && s.login && users[s.login]) currentLogin = s.login; } catch(e) { currentLogin = null; } }
+  function save() { try { localStorage.setItem(USERS_KEY, JSON.stringify(users)); localStorage.setItem(SAVES_KEY, JSON.stringify(saves)); localStorage.setItem(SESSION_KEY, JSON.stringify(currentLogin ? { login: currentLogin } : null)); } catch(e) {} }
+  function saveKey() { return currentLogin || '__guest__'; }
+  function ensureSave() { var k = saveKey(); if (!saves[k]) saves[k] = { currentId: CHARACTERS[0].id, chars: {} }; CHARACTERS.forEach(function(c) { if (!saves[k].chars[c.id]) saves[k].chars[c.id] = defaultSave(); if (!saves[k].chars[c.id].child) saves[k].chars[c.id].child = defaultChild(); var ch = saves[k].chars[c.id].child; ['name','skin','hair','shirt','pants'].forEach(function(f) { if (ch[f] === undefined) ch[f] = ''; }); }); currentId = saves[k].currentId || CHARACTERS[0].id; if (!saves[k].chars[currentId]) currentId = CHARACTERS[0].id; }
+  function cur() { ensureSave(); return saves[saveKey()].chars[currentId]; }
+  function bonusPct() { return stageByXp(cur().child.xp).bonus; }
+  function effTap() { var s = cur(); return Math.floor(s.perTap * (1 + bonusPct()/100)); }
+  function avgColors(list) { var v = list.filter(Boolean); if (!v.length) return '#f5c99b'; var r=0,g=0,b=0; v.forEach(function(hex){ try { var n = parseInt(hex.replace('#',''),16); r += (n>>16) & 0xFF; g += (n>>8) & 0xFF; b += n & 0xFF; } catch(e){} }); r = Math.round(r/v.length); g = Math.round(g/v.length); b = Math.round(b/v.length); return '#' + ((1<<24) + (r<<16) + (g<<8) + b).toString(16).slice(1); }
+  function getCommonChild() { ensureSave(); var chars = saves[saveKey()].chars; var skins=[], hairs=[], shirts=[], pants=[], total=0, dev=0; CHARACTERS.forEach(function(c){ var s = chars[c.id]; if (!s || !s.child) return; skins.push(s.child.skin || c.skin); hairs.push(s.child.hair || c.hair); shirts.push(s.child.shirt || c.shirt); pants.push(s.child.pants || c.pants); total += s.child.xp || 0; if ((s.child.xp||0) > 0) dev++; }); var avg = Math.floor(total / CHARACTERS.length); var skin = avgColors(skins); return { skin: skin, skinShadow: shade(skin, -22), hair: avgColors(hairs), shirt: avgColors(shirts), pants: avgColors(pants), total: total, avg: avg, dev: dev, stage: stageByXp(avg) }; }
+  function updateCommonChild() { try { var c = getCommonChild(); var kid = $('heroKid'); if (!kid) return; kid.style.setProperty('--skin', c.skin); kid.style.setProperty('--skin-shadow', c.skinShadow); kid.style.setProperty('--hair', c.hair); kid.style.setProperty('--shirt', c.shirt); kid.style.setProperty('--shirt-shadow', shade(c.shirt, -25)); kid.style.setProperty('--pants', c.pants); kid.style.setProperty('--pants-shadow', shade(c.pants, -25)); $('heroKidStage').textContent = c.stage.name; $('heroKidXp').textContent = c.total; $('heroXpFill').style.width = (progressToNext(c.avg) * 100) + '%'; $('heroKidHint').textContent = 'Суммарный прогресс всех твоих детей (ср. ' + c.avg + ' XP)'; $('heroKidBadge').textContent = c.dev + ' / ' + CHARACTERS.length; } catch(e) { console.warn('updateCommonChild:', e); } }
+  function showScreen(id) { document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); }); var el = $(id); if (el) el.classList.add('active'); if (id === 'mainScreen') updateCommonChild(); }
+  function openOv(id) { document.querySelectorAll('.overlay.open').forEach(function(o){ o.classList.remove('open'); }); var el = $(id); if (el) el.classList.add('open'); }
+  function closeOv(id) { var el = $(id); if (el) el.classList.remove('open'); }
+  function applyLook() { var c = CHARACTERS.find(function(x){ return x.id === currentId; }) || CHARACTERS[0]; $('character').textContent = c.emoji; $('character').className = 'character ' + c.bgClass; }
+  function updateUserUI() { if (currentLogin) { $('authButtons').style.display = 'none'; $('headerUserChip').style.display = 'flex'; $('headerUserName').textContent = currentLogin; $('headerUserAvatar').textContent = currentLogin.charAt(0).toUpperCase(); $('gameUserChip').style.display = 'flex'; $('gameUserName').textContent = currentLogin; $('gameUserAvatar').textContent = currentLogin.charAt(0).toUpperCase(); } else { $('authButtons').style.display = 'flex'; $('headerUserChip').style.display = 'none'; $('gameUserChip').style.display = 'flex'; $('gameUserName').textContent = 'Гость'; $('gameUserAvatar').textContent = '?'; } }
+  function updateUI() { var s = cur(); $('money').textContent = fmt(s.money); $('perTap').textContent = fmt(effTap()); $('totalTaps').textContent = fmt(s.totalTaps); $('upgradeCost').textContent = fmt(s.upgradeCost); $('upgradeBtn').disabled = s.money < s.upgradeCost; $('tapHint').style.display = s.totalTaps > 0 ? 'none' : ''; var st = stageByXp(s.child.xp); $('childStageName').textContent = st.name; $('xpFill').style.width = (progressToNext(s.child.xp) * 100) + '%'; var i = stageIdx(s.child.xp); $('childXpValue').textContent = i < CHILD_STAGES.length-1 ? (s.child.xp + ' / ' + CHILD_STAGES[i+1].minXp) : (s.child.xp + ' (макс)'); $('childBonus').textContent = '+' + st.bonus + '%'; updateUserUI(); updateCommonChild(); }
+  
+  function renderSelect() {
+    ensureSave(); var grid = $('selectGrid'); grid.innerHTML = ''; var chars = saves[saveKey()].chars;
+    CHARACTERS.forEach(function(c){
+      var s = chars[c.id]; var st = stageByXp(s.child.xp); var cn = s.child.name || c.childName;
+      var div = document.createElement('div'); div.className = 'select-card' + (c.id === currentId ? ' active' : '');
+      div.innerHTML = (c.id === currentId ? '<div class="active-badge">ВЫБРАН</div>' : '') + '<div class="avatar ' + c.avatarClass + '">' + c.emoji + '</div>' + '<div class="name">' + c.name + '</div>' + '<div class="money">💰 ' + fmt(s.money) + '</div>' + '<div class="per-tap">+' + fmt(s.perTap) + ' за тап</div>' + '<div class="child-mini">🌱 ' + esc(cn) + ' · ' + st.name + '</div>' + 
+      '<div class="card-buttons">' +
+        '<button class="play-mini" data-play="' + c.id + '">▶ Играть</button>' +
+        '<button class="child-mini-btn" data-child="' + c.id + '">👶 Малыш</button>' +
+      '</div>';
+      div.addEventListener('click', function(e){ if (e.target.closest('.card-buttons')) return; currentId = c.id; saves[saveKey()].currentId = c.id; save(); renderSelect(); toast('Выбран: ' + c.name); });
+      grid.appendChild(div);
+    });
+
+    grid.querySelectorAll('[data-play]').forEach(function(btn){ btn.addEventListener('click', function(e){ e.stopPropagation(); var id = btn.getAttribute('data-play'); var c = CHARACTERS.find(function(x){ return x.id === id; }); if (!c) return; currentId = id; saves[saveKey()].currentId = id; save(); applyLook(); updateUI(); showScreen('gameScreen'); toast('Погнали, ' + c.name + '! 🚀'); }); });
+
+    grid.querySelectorAll('[data-child]').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var id = btn.getAttribute('data-child');
+        if (!CHARACTERS.find(function(x){ return x.id === id; })) return;
+        currentId = id; saves[saveKey()].currentId = id; save();
+        renderSelect();
+        openChild();
+      });
+    });
+  }
+
+  function addXp(n) { var s = cur(); var old = stageIdx(s.child.xp); s.child.xp += n; var nw = stageIdx(s.child.xp); if (nw > old) { var st = CHILD_STAGES[nw]; setTimeout(function(){ toast('🎉 ' + st.name + '! +' + st.bonus + '% к доходу', 'success'); }, 100); } }
+  function doTap(x, y) { var s = cur(); var gain = effTap(); s.money += gain; s.totalTaps++; addXp(1); $('money').classList.add('bump'); setTimeout(function(){ $('money').classList.remove('bump'); }, 100); var rect = $('character-wrapper').getBoundingClientRect(); var px = x || (rect.left + rect.width/2); var py = y || (rect.top + rect.height/2); var ft = document.createElement('div'); ft.className = 'float-text'; ft.textContent = '+' + fmt(gain); ft.style.left = px + 'px'; ft.style.top = py + 'px'; ft.style.color = bonusPct() > 0 ? '#a8e6a1' : '#ffd700'; document.body.appendChild(ft); setTimeout(function(){ ft.remove(); }, 1000); if (s.totalTaps === 1) $('tapHint').style.display = 'none'; updateUI(); save(); }
+  function openChild() { var s = cur(); var st = stageByXp(s.child.xp); customDraft = { name: s.child.name || '', skin: s.child.skin || '', hair: s.child.hair || '', shirt: s.child.shirt || '', pants: s.child.pants || '' }; $('childPreviewName').textContent = s.child.name || (CHARACTERS.find(function(x){return x.id===currentId;})||CHARACTERS[0]).childName; $('childPreviewStage').textContent = st.name + ' · ' + s.child.xp + ' XP'; $('childNameInput').value = s.child.name || ''; renderColorRow('skinRow', SKIN_COLORS, 'skin', s.child.skin); renderColorRow('hairRow', HAIR_COLORS, 'hair', s.child.hair); renderColorRow('shirtRow', SHIRT_COLORS, 'shirt', s.child.shirt); renderColorRow('pantsRow', PANTS_COLORS, 'pants', s.child.pants); applyDraft(); openOv('childMenu'); }
+  function renderColorRow(rowId, colors, field, curColor) { var row = $(rowId); row.innerHTML = ''; var base = CHARACTERS.find(function(x){ return x.id === currentId; }) || CHARACTERS[0]; var def = { skin: base.skin, hair: base.hair, shirt: base.shirt, pants: base.pants }[field]; var active = curColor || def; colors.forEach(function(color){ var sw = document.createElement('div'); sw.className = 'color-swatch' + (color.toLowerCase() === active.toLowerCase() ? ' selected' : ''); sw.style.background = color; sw.addEventListener('click', function(){ customDraft[field] = color; renderColorRow(rowId, colors, field, color); applyDraft(); }); row.appendChild(sw); }); }
+  function applyDraft() { if (!customDraft) return; var base = CHARACTERS.find(function(x){ return x.id === currentId; }) || CHARACTERS[0]; var kid = $('childMenuKid'); var skin = customDraft.skin || base.skin; var hair = customDraft.hair || base.hair; var shirt = customDraft.shirt || base.shirt; var pants = customDraft.pants || base.pants; kid.style.setProperty('--skin', skin); kid.style.setProperty('--skin-shadow', shade(skin, -22)); kid.style.setProperty('--hair', hair); kid.style.setProperty('--shirt', shirt); kid.style.setProperty('--shirt-shadow', shade(shirt, -25)); kid.style.setProperty('--pants', pants); kid.style.setProperty('--pants-shadow', shade(pants, -25)); $('childPreviewName').textContent = customDraft.name || base.childName; }
+  function saveChild() { var s = cur(); var name = $('childNameInput').value.trim(); s.child.name = name || ''; s.child.skin = customDraft.skin || ''; s.child.hair = customDraft.hair || ''; s.child.shirt = customDraft.shirt || ''; s.child.pants = customDraft.pants || ''; save(); closeOv('childMenu'); updateCommonChild(); toast('Ребёнок обновлён! 👶', 'success'); }
+  function renderRating() { var rows = []; Object.keys(users).forEach(function(login){ var u = saves[login]; if (!u) return; var total = 0, best = null, bestM = -1, bestXp = 0, bestName = ''; CHARACTERS.forEach(function(c){ var s = u.chars[c.id]; if (!s) return; total += s.money; if (s.money > bestM) { bestM = s.money; best = c; bestXp = s.child ? s.child.xp : 0; bestName = s.child && s.child.name ? s.child.name : c.childName; } }); if (best) rows.push({ login: login, total: total, best: best, bestXp: bestXp, bestName: bestName }); }); if (saves['__guest__']) { var u2 = saves['__guest__']; var total2 = 0, best2 = null, bestM2 = -1, bestXp2 = 0, bestName2 = ''; CHARACTERS.forEach(function(c){ var s = u2.chars[c.id]; if (!s) return; total2 += s.money; if (s.money > bestM2) { bestM2 = s.money; best2 = c; bestXp2 = s.child ? s.child.xp : 0; bestName2 = s.child && s.child.name ? s.child.name : c.childName; } }); if (total2 > 0) rows.push({ login: 'Гость', total: total2, best: best2, bestXp: bestXp2, bestName: bestName2, isGuest: true }); } rows.sort(function(a,b){ return b.total - a.total; }); var list = $('ratingList'); list.innerHTML = ''; if (!rows.length) { list.innerHTML = '<div class="rating-empty">Пока никто не играл.<br>Зарегистрируйся и стань первым! 🏆</div>'; return; } rows.forEach(function(r, i){ var isMe = r.login === currentLogin && !r.isGuest; var div = document.createElement('div'); div.className = 'rating-row' + (isMe ? ' me' : ''); var medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : (i+1); var st = stageByXp(r.bestXp); div.innerHTML = '<div class="rating-rank">' + medal + '</div>' + '<div class="rating-info">' + '<div class="rating-name">' + esc(r.login) + (isMe ? ' (ты)' : '') + '</div>' + '<div class="rating-char">' + r.best.emoji + ' ' + r.best.name + ' · 👶 ' + esc(r.bestName) + ' (' + st.name + ')</div>' + '</div>' + '<div class="rating-money">💰 ' + fmt(r.total) + '</div>'; list.appendChild(div); }); }
+  function register(login, pass) { login = login.trim(); if (login.length < 3 || login.length > 20) { toast('Логин: 3–20 символов', 'error'); return false; } if (!/^[a-zA-Z0-9_а-яА-ЯёЁ]+$/.test(login)) { toast('Логин: только буквы, цифры и _', 'error'); return false; } if (pass.length < 4) { toast('Пароль: минимум 4 символа', 'error'); return false; } if (users[login]) { toast('Логин занят', 'error'); return false; } users[login] = { pass: pass, createdAt: Date.now() }; saves[login] = { currentId: CHARACTERS[0].id, chars: {} }; CHARACTERS.forEach(function(c){ saves[login].chars[c.id] = defaultSave(); }); save(); toast('Аккаунт создан! Входи 🎉', 'success'); return true; }
+  function doLogin(login, pass) { login = login.trim(); if (!users[login]) { toast('Пользователь не найден', 'error'); return false; } if (users[login].pass !== pass) { toast('Неверный пароль', 'error'); return false; } currentLogin = login; save(); ensureSave(); applyLook(); updateUI(); closeOv('authMenu'); toast('С возвращением, ' + login + '!', 'success'); return true; }
+  function doLogout() { currentLogin = null; save(); ensureSave(); applyLook(); updateUI(); closeOv('authMenu'); toast('Вы вышли. Прогресс гостя сохранён.'); }
+  function prepAuth(mode) { if (mode === 'profile' && currentLogin) { $('authTitle').textContent = '👤 ' + currentLogin; $('authTabs').style.display = 'none'; $('loginForm').style.display = 'none'; $('registerForm').style.display = 'none'; $('logoutBtn').style.display = 'block'; } else { $('logoutBtn').style.display = 'none'; setAuthTab(mode === 'register' ? 'register' : 'login'); } }
+  function setAuthTab(tab) { $('authTabs').style.display = 'flex'; document.querySelectorAll('.auth-tab').forEach(function(t){ t.classList.toggle('active', t.getAttribute('data-tab') === tab); }); $('loginForm').style.display = tab === 'login' ? 'flex' : 'none'; $('registerForm').style.display = tab === 'register' ? 'flex' : 'none'; $('logoutBtn').style.display = 'none'; $('authTitle').textContent = tab === 'login' ? '👤 Вход' : '📝 Регистрация'; }
+  function spawnDecor() { var decor = $('bgDecor'); if (!decor) return; var emojis = ['💰','🌱','👶','⭐','💎','🎮','🏆','💵']; for (var i = 0; i < 14; i++) { var span = document.createElement('span'); span.textContent = emojis[Math.floor(Math.random() * emojis.length)]; span.style.left = Math.random() * 100 + '%'; span.style.top = (100 + Math.random() * 40) + 'vh'; span.style.fontSize = (20 + Math.random() * 30) + 'px'; span.style.animationDuration = (15 + Math.random() * 15) + 's'; span.style.animationDelay = (-Math.random() * 20) + 's'; decor.appendChild(span); } }
+  function bind() {
+    $('character-wrapper').addEventListener('pointerdown', function(e){ e.preventDefault(); doTap(e.clientX, e.clientY); });
+    $('character-wrapper').addEventListener('contextmenu', function(e){ e.preventDefault(); });
+    $('upgradeBtn').addEventListener('click', function(){ var s = cur(); if (s.money < s.upgradeCost) return; s.money -= s.upgradeCost; s.upgradeLevel++; s.perTap += 1; s.upgradeCost = Math.floor(50 * Math.pow(1.6, s.upgradeLevel - 1)); updateUI(); save(); toast('Улучшено! Теперь +' + s.perTap + ' за тап 🚀', 'success'); });
+    $('playBtn').addEventListener('click', function(){ ensureSave(); renderSelect(); showScreen('selectScreen'); });
+    $('selectBackBtn').addEventListener('click', function(){ save(); showScreen('mainScreen'); });
+    $('backBtn').addEventListener('click', function(){ save(); renderSelect(); showScreen('selectScreen'); });
+    $('openTapsBtn').addEventListener('click', function(){ save(); renderSelect(); showScreen('selectScreen'); });
+    $('openRatingBtn').addEventListener('click', function(){ renderRating(); openOv('ratingMenu'); });
+    $('headerLoginBtn').addEventListener('click', function(){ prepAuth('login'); openOv('authMenu'); });
+    $('headerRegisterBtn').addEventListener('click', function(){ prepAuth('register'); openOv('authMenu'); });
+    $('headerUserChip').addEventListener('click', function(){ prepAuth('profile'); openOv('authMenu'); });
+    $('gameUserChip').addEventListener('click', function(){ prepAuth('profile'); openOv('authMenu'); });
+    document.querySelectorAll('.auth-tab').forEach(function(t){ t.addEventListener('click', function(){ setAuthTab(t.getAttribute('data-tab')); }); });
+    $('loginForm').addEventListener('submit', function(e){ e.preventDefault(); if (doLogin($('loginName').value, $('loginPass').value)) { $('loginName').value = ''; $('loginPass').value = ''; } });
+    $('registerForm').addEventListener('submit', function(e){ e.preventDefault(); var n = $('regName').value, p1 = $('regPass').value, p2 = $('regPass2').value; if (p1 !== p2) { toast('Пароли не совпадают', 'error'); return; } if (register(n, p1)) { $('regName').value = ''; $('regPass').value = ''; $('regPass2').value = ''; setAuthTab('login'); $('loginName').value = n.trim(); } });
+    $('logoutBtn').addEventListener('click', doLogout);
+    $('childNameInput').addEventListener('input', function(){ if (!customDraft) return; customDraft.name = $('childNameInput').value.trim(); applyDraft(); });
+    $('saveChildBtn').addEventListener('click', saveChild);
+    document.querySelectorAll('[data-close]').forEach(function(btn){ btn.addEventListener('click', function(){ closeOv(btn.getAttribute('data-close')); }); });
+    document.querySelectorAll('.overlay').forEach(function(ov){ ov.addEventListener('click', function(e){ if (e.target === ov) ov.classList.remove('open'); }); });
+  }
+  function init() { load(); ensureSave(); applyLook(); updateUI(); updateCommonChild(); spawnDecor(); bind(); setInterval(save, 5000); window.addEventListener('beforeunload', save); document.addEventListener('visibilitychange', function(){ if (document.hidden) save(); }); }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
+</body>
+</html>
